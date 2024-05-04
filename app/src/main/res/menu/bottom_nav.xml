@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="People"
+        android:id="@+id/peopleFragment"
+        android:icon="@drawable/people_icon"
+        />
+    <item android:title="Room"
+        android:id="@+id/roomFragment"
+        android:icon="@drawable/meeting_room"
+        />
+</menu>
