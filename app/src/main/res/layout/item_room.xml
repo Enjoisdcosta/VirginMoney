@@ -2,11 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RoomId"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp"
-    android:id="@+id/RoomId"
-    android:background="@drawable/room_avaliable_background">
+    android:background="@drawable/room_avaliable_background"
+    android:padding="12dp">
 
     <TextView
         android:id="@+id/tvRoomId"
@@ -15,7 +15,7 @@
         android:layout_marginEnd="292dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvMaxRoom"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="First Name" />
+        tools:text="Room Id" />
 
     <TextView
         android:id="@+id/tvMaxRoom"
@@ -23,8 +23,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvAvailable"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toEndOf="@+id/tvRoomId"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Last Name" />
+        tools:text="Max" />
+
+    <TextView
+        android:id="@+id/tvAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923"
+        tools:text="Availabliity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

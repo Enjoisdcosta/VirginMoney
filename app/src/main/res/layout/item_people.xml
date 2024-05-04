@@ -18,13 +18,15 @@
 
     <TextView
         android:id="@+id/tvFirstName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:maxLines="4"
         android:layout_marginStart="12dp"
-        tools:text="First Name"
         android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvLastName"
-        app:layout_constraintStart_toEndOf="@+id/ivProfile" />
+        app:layout_constraintStart_toEndOf="@+id/ivProfile"
+        tools:text="First Name" />
 
     <TextView
         android:id="@+id/tvLastName"
@@ -39,22 +41,28 @@
 
     <TextView
         android:id="@+id/tvEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
         android:textColor="@color/black"
+        android:maxLines="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:layout_constraintTop_toBottomOf="@+id/tvFirstName"
         tools:text="Email" />
 
     <TextView
         android:id="@+id/tvJobTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        tools:text="Job Title"
+        android:layout_marginTop="12dp"
         android:textColor="@color/black"
+        android:maxLines="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tvEmail"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+        tools:text="Job Title" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,6 +28,7 @@ class RoomAdapter(
 //                    .into(ivProfile)
                 tvRoomId.text = "Room id: ${roomItemModel.id}"
                 tvMaxRoom.text = "Max Occupancy: ${roomItemModel.maxOccupancy.toString()}"
+                tvAvailable.text = "${roomItemModel.isOccupied.toString()}"
                 if (roomItemModel.isOccupied==true){
 //                    ItemRoomBinding.bind(itemView.background= "@color/green")
                 }
