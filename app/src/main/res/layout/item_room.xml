@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp">
+    android:padding="12dp"
+    android:id="@+id/RoomId"
+    android:background="@drawable/room_avaliable_background">
 
     <TextView
         android:id="@+id/tvRoomId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="141dp"
+        android:layout_marginEnd="292dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvMaxRoom"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="First Name" />
@@ -19,8 +21,8 @@
         android:id="@+id/tvMaxRoom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintStart_toEndOf="@+id/tvRoomId"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Last Name" />

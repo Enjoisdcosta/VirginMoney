@@ -26,7 +26,11 @@ class RoomAdapter(
 //                Glide.with(itemView.context).load(peopleItemModel.avatar)
 //                    .placeholder(R.drawable.people_icon)
 //                    .into(ivProfile)
-                tvRoomId.text = "Room id ${roomItemModel.id}"
+                tvRoomId.text = "Room id: ${roomItemModel.id}"
+                tvMaxRoom.text = "Max Occupancy: ${roomItemModel.maxOccupancy.toString()}"
+                if (roomItemModel.isOccupied==true){
+//                    ItemRoomBinding.bind(itemView.background= "@color/green")
+                }
 
 
             }

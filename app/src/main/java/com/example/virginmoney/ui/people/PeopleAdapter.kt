@@ -26,10 +26,10 @@ class PeopleAdapter(
                     .into(ivProfile)
 
 
-                tvFirstName.text = "Name ${peopleItemModel.firstName }"
-                tvLastName.text = "Last Name: ${peopleItemModel.lastName}"
-                tvEmail.text = "Email: ${peopleItemModel.email}"
-                tvJobTitle.text = peopleItemModel.jobtitle
+                tvFirstName.text = "Name: ${peopleItemModel.firstName }"
+                tvLastName.text = "${peopleItemModel.lastName}"
+                tvEmail.text = "${peopleItemModel.email}"
+                tvJobTitle.text = "Job Title: ${peopleItemModel.jobtitle}"
 
             }
         }

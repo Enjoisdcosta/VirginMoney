@@ -10,7 +10,7 @@
         android:id="@+id/ivProfile"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="9dp"
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         tools:text="First Name"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvLastName"
         app:layout_constraintStart_toEndOf="@+id/ivProfile" />
 
@@ -29,8 +30,9 @@
         android:id="@+id/tvLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/tvFirstName"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Last Name" />
@@ -41,9 +43,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="28dp"
-        tools:text="Email"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
-        app:layout_constraintTop_toBottomOf="@+id/tvFirstName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFirstName"
+        tools:text="Email" />
 
     <TextView
         android:id="@+id/tvJobTitle"
@@ -51,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         tools:text="Job Title"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/tvEmail"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 </androidx.constraintlayout.widget.ConstraintLayout>
