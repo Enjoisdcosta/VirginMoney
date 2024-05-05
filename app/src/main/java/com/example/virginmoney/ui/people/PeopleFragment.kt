@@ -48,12 +48,12 @@ class PeopleFragment : Fragment() {
                     adapter = PeopleAdapter(it) {peopleItemModel ->
                         findNavController().navigate(R.id.action_peopleFragment_to_peopleDetailFragment,
                             bundleOf(
-                                Pair("First Name",peopleItemModel.firstName),
-                                Pair("Last Name",peopleItemModel.lastName),
-                                Pair("Email",peopleItemModel.email),
-                                Pair("Job Title",peopleItemModel.jobtitle),
-                                Pair("Favorite Color",peopleItemModel.favouriteColor),
-                                Pair("Profile Pic",peopleItemModel.avatar)
+                                Pair("firstName",peopleItemModel.firstName),
+                                Pair("lastName",peopleItemModel.lastName),
+                                Pair("email",peopleItemModel.email),
+                                Pair("jobTitle",peopleItemModel.jobtitle),
+                                Pair("favoriteColor",peopleItemModel.favouriteColor),
+                                Pair("profileImage",peopleItemModel.avatar)
 
                             )
                         )
