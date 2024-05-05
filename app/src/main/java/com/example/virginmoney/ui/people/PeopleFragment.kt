@@ -5,8 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.virginmoney.R
 import com.example.virginmoney.databinding.FragmentPeopleBinding
@@ -44,7 +45,20 @@ class PeopleFragment : Fragment() {
             peopleViewModel.peopleList.observe(viewLifecycleOwner){
                 rvPeople.apply {
                     layoutManager = LinearLayoutManager(context)
-                    adapter = PeopleAdapter(it)
+                    adapter = PeopleAdapter(it) {peopleItemModel ->
+                        findNavController().navigate(R.id.action_peopleFragment_to_peopleDetailFragment,
+                            bundleOf(
+                                Pair("First Name",peopleItemModel.firstName),
+                                Pair("Last Name",peopleItemModel.lastName),
+                                Pair("Email",peopleItemModel.email),
+                                Pair("Job Title",peopleItemModel.jobtitle),
+                                Pair("Favorite Color",peopleItemModel.favouriteColor),
+                                Pair("Profile Pic",peopleItemModel.avatar)
+
+                            )
+                        )
+
+                    }
                 }
             }
 

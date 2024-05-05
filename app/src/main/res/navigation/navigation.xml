@@ -9,11 +9,20 @@
         android:id="@+id/peopleFragment"
         android:name="com.example.virginmoney.ui.people.PeopleFragment"
         android:label="People"
-        tools:layout="@layout/fragment_people" />
+        tools:layout="@layout/fragment_people" >
+        <action
+            android:id="@+id/action_peopleFragment_to_peopleDetailFragment"
+            app:destination="@id/peopleDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/roomFragment"
         android:name="com.example.virginmoney.ui.room.RoomFragment"
         android:label="Room"
         tools:layout="@layout/fragment_room" />
+    <fragment
+        android:id="@+id/peopleDetailFragment"
+        android:name="com.example.virginmoney.ui.detail.PeopleDetailFragment"
+        android:label="fragment_people_detail"
+        tools:layout="@layout/fragment_people_detail" />
 
 </navigation>

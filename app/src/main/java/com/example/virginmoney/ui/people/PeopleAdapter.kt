@@ -11,7 +11,8 @@ import com.example.virginmoney.data.model.people.PeopleItemModel
 import com.example.virginmoney.databinding.ItemPeopleBinding
 
 class PeopleAdapter(
-    val peopleList: List<PeopleItemModel>
+    val peopleList: List<PeopleItemModel>,
+    val function: (PeopleItemModel) -> Unit
 ): Adapter<PeopleAdapter.MyViewHolder>() {
 
 
@@ -41,10 +42,13 @@ class PeopleAdapter(
             LayoutInflater.from(parent.context).inflate(R.layout.item_people, parent,false)
         )
     }
-
     override fun getItemCount() = peopleList.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.updateUI(peopleList[position])
+
+        holder.binding.root.setOnClickListener {
+            function.invoke(peopleList[position])
+        }
     }
 }
