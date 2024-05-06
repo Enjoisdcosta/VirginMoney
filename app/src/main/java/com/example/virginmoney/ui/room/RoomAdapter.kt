@@ -39,7 +39,7 @@ class RoomAdapter(
 
 
     }
-
+// all adapter need oncreateviewholder, getitemcount and onbindview holder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_room, parent, false)
