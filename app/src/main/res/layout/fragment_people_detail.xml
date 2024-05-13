@@ -5,6 +5,7 @@
     android:id="@+id/detail_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/people_detail_background"
     tools:context=".ui.detail.PeopleDetailFragment">
 
 
@@ -31,6 +32,7 @@
         android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
+        android:textColor="@color/white"
         android:text="@string/first_name_detail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileImageDetail" />
@@ -39,6 +41,7 @@
         android:id="@+id/lastNameDetail"
         android:layout_width="0dp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -52,6 +55,7 @@
         android:id="@+id/emailDetail"
         android:layout_width="0dp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -65,6 +69,7 @@
         android:id="@+id/jobTitleDetail"
         android:layout_width="0dp"
         android:maxLines="5"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="wrap_content"
@@ -78,6 +83,7 @@
         android:id="@+id/favoriteColorDetail"
         android:layout_width="0dp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
