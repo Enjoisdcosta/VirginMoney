@@ -46,7 +46,6 @@ class PeopleAdapter(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.updateUI(peopleList[position])
-
         holder.binding.root.setOnClickListener {
             function.invoke(peopleList[position])
         }

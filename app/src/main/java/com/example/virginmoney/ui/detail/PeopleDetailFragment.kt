@@ -22,12 +22,12 @@ class PeopleDetailFragment : Fragment() {
         binding = FragmentPeopleDetailBinding.inflate(inflater, container, false)
 
         // Inflate the layout for this fragment
-        val firstName = arguments?.getString("First Name")
-        val lastName = arguments?.getString("Last Name")
-        val email = arguments?.getString("Email")
-        val jobTitle = arguments?.getString("Job Title")
-        val favoriteColor = arguments?.getString("Fav color")
-        val profileImage = arguments?.getString("Fav color")
+        val firstName = arguments?.getString("firstName")
+        val lastName = arguments?.getString("lastName")
+        val email = arguments?.getString("email")
+        val jobTitle = arguments?.getString("jobTitle")
+        val favoriteColor = arguments?.getString("favoriteColor")
+        val profileImage = arguments?.getString("profileImage")
 
         binding.apply {
             firstNameDetail.text = firstName
