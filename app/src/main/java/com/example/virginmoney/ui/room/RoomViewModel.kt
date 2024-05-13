@@ -7,9 +7,13 @@ import androidx.lifecycle.viewModelScope
 import com.example.virginmoney.data.api.RetrofitInstance
 import com.example.virginmoney.data.model.people.PeopleItemModel
 import com.example.virginmoney.data.model.room.RoomItemModel
+import com.example.virginmoney.data.repository.Repository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class RoomViewModel : ViewModel() {
+@HiltViewModel
+class RoomViewModel @Inject constructor(val repository: Repository) : ViewModel() {
 
     //    private val _peopleList = MutableLiveData<ArrayList<PeopleItemModel>>()
 //    val peopleList: LiveData<ArrayList<PeopleItemModel>> = _peopleList
@@ -24,7 +28,7 @@ class RoomViewModel : ViewModel() {
     fun getRoomList() {
         viewModelScope.launch {
 
-            val result = RetrofitInstance.apiClient.getRoomList()
+            val result = repository.getRoomList()
 
             if (!result.isNullOrEmpty()) {
                 _roomList.postValue(result)

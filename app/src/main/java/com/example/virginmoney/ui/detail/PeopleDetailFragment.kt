@@ -9,7 +9,9 @@ import com.bumptech.glide.Glide
 import com.example.virginmoney.R
 import com.example.virginmoney.databinding.FragmentPeopleBinding
 import com.example.virginmoney.databinding.FragmentPeopleDetailBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PeopleDetailFragment : Fragment() {
 
     lateinit var binding: FragmentPeopleDetailBinding

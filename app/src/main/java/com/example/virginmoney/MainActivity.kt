@@ -7,7 +7,9 @@ import com.example.virginmoney.databinding.ActivityMainBinding
 import com.example.virginmoney.ui.detail.PeopleDetailFragment
 import com.example.virginmoney.ui.people.PeopleFragment
 import com.example.virginmoney.ui.room.RoomFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
