@@ -8,6 +8,9 @@ import com.example.virginmoney.ui.detail.PeopleDetailFragment
 import com.example.virginmoney.ui.people.PeopleFragment
 import com.example.virginmoney.ui.room.RoomFragment
 import dagger.hilt.android.AndroidEntryPoint
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -17,12 +20,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(PeopleFragment())
+        //replaceFragment(PeopleFragment())
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.peopleFragment) as NavHostFragment
+        val navController = navHostFragment.navController
 
         binding.bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.peopleFragment -> replaceFragment(PeopleFragment())
-                R.id.roomFragment -> replaceFragment(RoomFragment())
+                R.id.peopleFragment -> navController.navigate(R.id.peopleFragment)
+                R.id.roomFragment -> navController.navigate(R.id.roomFragment)
                 else -> {
                 }
             }
